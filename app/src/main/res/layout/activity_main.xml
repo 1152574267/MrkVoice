@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button_cacelListening"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cancel listening" />
+
+    <Button
+        android:id="@+id/button_writePcm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_cacelListening"
+        android:text="write pcm" />
+
+    <Button
+        android:id="@+id/auto_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_writePcm"
+        android:text="auto test" />
+
+    <Button
+        android:id="@+id/button_stopListening"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/auto_test"
+        android:text="stop listening" />
+
+    <Button
+        android:id="@+id/start_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_stopListening"
+        android:text="start record" />
+
+    <CheckBox
+        android:id="@+id/result_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_stopListening"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/start_record"
+        android:text="result right" />
+
+    <CheckBox
+        android:id="@+id/result_wrong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_stopListening"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/result_right"
+        android:text="result wrong" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/start_record"
+        android:layout_marginRight="20dp"
+        android:text="submit" />
+
+    <EditText
+        android:id="@+id/input_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/start_record"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@id/submit"
+        android:hint="input result" />
+
+    <TextView
+        android:id="@+id/start_record_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_result"
+        android:layout_marginLeft="5dp"
+        android:text="start record show" />
+
+</RelativeLayout>
