@@ -4,12 +4,10 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -38,13 +36,12 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.lang.ref.WeakReference;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private static final String TAG = "MainActivity";
+    private static final String TAG = MainActivity.class.getSimpleName();
+
     public static final String AUDIO_SOURCE_TYPE_RECORDER = "recorder";
     public static final String AUDIO_SOURCE_TYPE_USER = "user";
     public static final String AUDIO_SOURCE_TYPE_FILE = "file";
@@ -93,7 +90,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String TEST_PCM_PATH = "/storage/emulated/0/Android/data/com.huawei.hiai/files/pcm";
 
     /**********************************************************/
-
     /**
      * 调用过程如下：
      * (1)初始化AsrRecognizer类
@@ -109,7 +105,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      *（5）多线程调用：由于Android同一时刻只能有一个录音线程在，故本特性不支持多实例
      *（6）语音识别引擎的调用必须在UI的主线程中，且必须调用init和destroy
      * */
-
     /**********************************************************/
 
     @Override
